@@ -1,0 +1,96 @@
+/* Orange Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #fb8c00;
+  --primary-hover: #f57c00;
+  --primary-focus: rgba(251, 140, 0, 0.125);
+  --primary-inverse: #FFF;
+}
+
+/* Orange Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --primary: #fb8c00;
+    --primary-hover: #ff9800;
+    --primary-focus: rgba(251, 140, 0, 0.25);
+    --primary-inverse: #FFF;
+  }
+}
+
+/* Orange Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #fb8c00;
+  --primary-hover: #ff9800;
+  --primary-focus: rgba(251, 140, 0, 0.25);
+  --primary-inverse: #FFF;
+}
+
+/* Orange (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
+
+.image-xl {
+    width:250px;
+    height:250px;
+}
+
+.selected {
+    font-family: Open Sans,sans-serif;
+    color: #ffa200;
+    border-bottom: 3px solid #ffa200;
+    border-radius: 0px;
+}
+
+.secondary {
+  transition: color, border 0.1s;
+  
+}
+
+.secondary:hover {
+  color: #ffa200;
+  border-bottom: 3px solid #ffa200;
+  border-radius: 0px;
+}
+
+.hero {
+  background-color: #394046;
+  background-image: url("assets/background_home.jpg");
+  background-position: center;
+  background-size: cover;
+  border:1px solid none;
+}
+
+.title {
+  font-family: "Lato";
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombre textuelle */
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)); /* Dégradé de couleurs */
+}
+
+.horaires {
+  padding:0px;
+  border-radius: 20px;
+  opacity:0.9;
+  color:#ffa200;
+}
+
+.wait_for_load {
+  display:none;
+}
+
+.dark {
+  background-color: #394046;
+}
+
+.logo {
+  padding:20px;
+  width:20%;
+  height:20%;
+}
