@@ -15,48 +15,12 @@
 </head>
 
 <body class="wait_for_load">
-  <div class="container">
-    <nav>
-      <ul>
-        <li><strong id="status">...</strong></li>
-      </ul>
-      <ul>
-        <li><a href="#" role="button">Membres</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="container">
-    <center>
-      <img src="assets/labsud_logo_full.svg"></img>
-    </center>
-  </div>
-
-  <br>
+  <div w3-include-html="elements/topbar.html"></div>
+  <div w3-include-html="elements/logo.html"></div>
   <div w3-include-html="elements/navigation.html"></div>
-  <div class="hero">
-    <header class="container">
-      <div class="grid">
-        <div>
-          <hgroup>
-            <h1 class="title">LE FABLAB DE MONTPELLIER</h1>
-            <h2 class="title">LABSud est un laboratoire de fabrication numérique accessible à tout le monde. Venez nous
-              rendre visite durant nos heures d’ouverture pour découvrir les lieux et les activités.</h2>
-          </hgroup>
-          <p><a href="#" role="button" onclick="event.preventDefault()">En savoir plus</a></p>
-
-        </div>
-        <div>
-          <article data-theme="dark" class="horaires">
-            <center>Heures d'ouvertures
-              <div w3-include-html="elements/horaires.html"></div>
-            </center>
-          </article>
-        </div>
-      </div>
-    </header>
-  </div>
+  <div w3-include-html="elements/presentation.html"></div>
+  
   <div class="container">
-
     <center>
       <h1>Actualités</h1>
     </center>
@@ -86,10 +50,9 @@
         <a href="">Charte des FabLabs</a>
         <br><br>
     </div>
-
-      <script src="includer.js"></script>
-      <script src="status.js"></script>
-
-
 </center>
+
+<script src="includer.js"></script>
+<script src="status.js"></script>
+
 </html>
