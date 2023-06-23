@@ -30,4 +30,5 @@ function includeHTML() {
   }
   // Show page after load
   document.querySelector('.wait_for_load').removeAttribute("class","wait_for_load")
+  checkOpeningHours();
 }
