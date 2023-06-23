@@ -7,7 +7,7 @@ function rewriterLiens() {
     var liens = document.querySelectorAll("a");
     liens.forEach(function (lien) {
       var url = lien.getAttribute("href") || lien.getAttribute("src");
-      if (url = "/") {
+      if (url == "/") {
         var nouvelleUrl = url.replace("/", urlActuelle + "/labsud_web");
         lien.setAttribute("href", nouvelleUrl);
       }
