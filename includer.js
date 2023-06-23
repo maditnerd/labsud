@@ -8,7 +8,7 @@ function rewriterLiens() {
     var url = lien.getAttribute("href") || lien.getAttribute("src");
     
     if (url && url.includes("github.io")) {
-      var nouvelleUrl = url.replace(urlActuelle + "/assets", urlActuelle + "/labsud_web/assets");
+      var nouvelleUrl = url.replace("/", "/labsud_web");
       
       if (lien.tagName === "a") {
         lien.setAttribute("href", nouvelleUrl);
