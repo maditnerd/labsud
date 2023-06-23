@@ -3,18 +3,13 @@ includeHTML();
 function rewriterLiens() {
   var urlActuelle = window.location.origin;
   if (urlActuelle.includes("github.io")) {
-    var liens = document.querySelectorAll("a, img");
+    console.log("Réécriture des liens");
+    var liens = document.querySelectorAll("a");
     liens.forEach(function (lien) {
       var url = lien.getAttribute("href") || lien.getAttribute("src");
-
-      if (url) {
-        var nouvelleUrl = url.replace("/", "/labsud_web");
-        console.log(nouvelleUrl);
-        if (lien.tagName === "a") {
-          lien.setAttribute("href", nouvelleUrl);
-        } else if (lien.tagName === "img") {
-          lien.setAttribute("src", nouvelleUrl);
-        }
+      if (url = "/") {
+        var nouvelleUrl = url.replace("/", urlActuelle + "/labsud_web");
+        lien.setAttribute("href", nouvelleUrl);
       }
     });
   }
