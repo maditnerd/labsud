@@ -1,4 +1,24 @@
 includeHTML();
+
+function rewriterLiens() {
+  var liens = document.querySelectorAll("a, img");
+  var urlActuelle = window.location.origin;
+  
+  liens.forEach(function(lien) {
+    var url = lien.getAttribute("href") || lien.getAttribute("src");
+    
+    if (url && url.includes("github.io")) {
+      var nouvelleUrl = url.replace(urlActuelle + "/assets", urlActuelle + "/labsud_web/assets");
+      
+      if (lien.tagName === "a") {
+        lien.setAttribute("href", nouvelleUrl);
+      } else if (lien.tagName === "img") {
+        lien.setAttribute("src", nouvelleUrl);
+      }
+    }
+  });
+}
+
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /* Loop through a collection of all HTML elements: */
@@ -30,5 +50,6 @@ function includeHTML() {
   }
   // Show page after load
   document.querySelector('.wait_for_load').removeAttribute("class","wait_for_load")
+  rewriterLiens();
   checkOpeningHours();
 }
